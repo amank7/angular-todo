@@ -1,0 +1,14 @@
+<p>todo works!</p>
+<br />
+
+<div class="todo">
+  <label for="todo">Add task in todo list!</label><br />
+  <input type="text" id="todo" [(ngModel)]="inputValue" />
+  <button (click)="onAdd()">Add</button>
+
+  <ul>
+    <li *ngFor="let task of tasksArray; index as i" (click)="remove(i)">
+      {{ task }}{{ i }}
+    </li>
+  </ul>
+</div>
